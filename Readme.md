@@ -1,3 +1,3 @@
 javaScript project
 
-1. [geometry-genius](https://comfy-taiyaki-ae89cc.netlify.app)
+1.Live demo=  [geometry-genius](https://comfy-taiyaki-ae89cc.netlify.app)
