@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-2">
+    <header>
+
+    </header>
+
+    <main class="">
+        <div class="lg:flex">
+           <div  class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <!-- triangle cart -->
+            <div class="card bg-base-100 w-72 h-[350px] shadow-xl flex items-center">
+                <div class="h-1/2">
+                    <img class="w-48 " src="./images/triangle.png" alt="">
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-center">Triangle</h3>
+                    <p class="mb-2 text-center">Area = 0.5 x b x h</p>
+
+                    <div>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="triangle-base" placeholder="b"><span class="mx-2">cm</span>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="triangle-height" placeholder="h"><span class="mx-2">cm</span>
+                    </div>
+
+                    <p class="text-xs pt-2"> Area = <spn id="triangle-area"> </spn><span> Cm<sup>2</sup></span></p>
+                    <button id="triangle" class="btn  btn-md w-full mb-2 bg-[#1090D8] text-white  b hover:bg-[#1090D8]">Calculate</button>
+                </div>
+              </div>
+
+
+              <!--rectangle cart-->
+            <div class="card bg-base-100 w-72 h-[350px] shadow-xl flex items-center">
+                <div class="h-1/2">
+                    <img class="w-56 mt-4" src="./images/rectangle.png" alt="">
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-center">Rectangle</h3>
+                    <p class="mb-2 text-center">Area =  l x w</p>
+
+                    <div>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="rectangle-length" placeholder="length"><span class="mx-2">cm</span>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="rectangle-width" placeholder="wight"><span class="mx-2">cm</span>
+                    </div>
+                    <p class="text-xs pt-2"> Area = <san id="rectangle-area"> </san><span> Cm<sup>2</sup></span></p>
+
+                    <button id="rectangle" class="btn btn-md w-full bg-[#1090D8] text-white hover:bg-[#1090D8]">Calculate</button>
+                </div>
+              </div>
+
+              <!-- Parallelogram cart -->
+              <div class="card bg-base-100 w-72 h-[350px] shadow-xl flex items-center">
+                <div class="h-1/2">
+                    <img class="w-56 mt-4" src="./images/parallelogram.png" alt="">
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-center">Parallelogram</h3>
+                    <p class="mb-2 text-center">Area = b x h</p>
+
+                    <div>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="parallelogram-base" placeholder="b"><span class="mx-2">cm</span>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="parallelogram-height" placeholder="h"><span class="mx-2">cm</span>
+                    </div>
+                    <p class="text-xs pt-2"> Area = <span id="parallelogram-area">0</span><span> Cm<sup>2</sup></span></p>
+                    <button id="parallelogram" class="btn  btn-md w-full bg-[#1090D8] text-white  b hover:bg-[#1090D8]">Calculate</button>
+                </div>
+              </div>
+              <!--Rhombus cart  -->
+            <div class="card bg-base-100 w-72 h-[350px] shadow-xl flex items-center">
+                <div class="h-1/2">
+                    <img class="w-48 mt-4" src="./images/rhombus.png" alt="">
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-center">Rhombus</h3>
+                    <p class="mb-2 text-center">Area = 0.5 x <span>d<sub>1</sub></span> x <span>d<sub>2 </sub></span></p> 
+
+                    <div>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="rhombus-first-diagonal" placeholder="d₁"><span class="mx-2">cm</span>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="rhombus-second-diagonal" placeholder="d₂"><span class="mx-2">cm</span>
+                    </div>
+                    <p class="text-xs pt-2"> Area = <span id="rhombus-area">0</span><span> Cm<sup>2</sup></span></p>
+                    <button id="rhombus" class="btn  btn-md w-full bg-[#1090D8] text-white mt-3 hover:bg-[#1090D8]">Calculate</button>
+                </div>
+              </div>
+
+           <!-- Pentagon cart -->
+            <div class="card bg-base-100 w-72 h-[350px] shadow-xl flex items-center">
+                <div class="h-1/2">
+                    <img class="w-40 " src="./images/pentagon.png" alt="">
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-center">Pentagon</h3>
+                    <p class="mb-2 text-center">Area = 0.5 x p x a</p>
+
+                    <div>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="pentagon-perimeter" placeholder="p"><span class="mx-2">cm</span>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="pentagon-apothem" placeholder="a"><span class="mx-2">cm</span>
+                    </div>
+
+                    <p class="text-xs pt-2"> Area = <span id="pentagon-area">0</span><span> Cm<sup>2</sup></span></p>
+                    <button id="pentagon" class="btn  btn-md w-full bg-[#1090D8] text-white mt-3 hover:bg-[#1090D8]">Calculate</button>
+                </div>
+              </div>
+
+
+              <!-- Ellipse cart -->
+            <div class="card bg-base-100 w-72 h-[350px] shadow-xl flex items-center">
+                <div class="h-1/2">
+                    <img class="w-56 mt-4" src="./images/ellipse.png" alt="">
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-center">Triangle</h3>
+                    <p class="mb-2 text-center">Area (A) =πab</p>
+
+                    <div>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="triangle-base" placeholder="b"><span class="mx-2">cm</span>
+                        <input class="w-20 h-8 bg-gray-100 rounded-lg pl-2 outline-none text-xs font-semibold" type="text"  id="triangle-height" placeholder="h"><span class="mx-2">cm</span>
+                    </div>
+
+                    <button id="triangle" class="btn  btn-md w-full bg-[#1090D8] text-white mt-3 hover:bg-[#1090D8]">Calculate</button>
+                </div>
+              </div>
+
+           
+        </div> 
+
+       <div class="w-80">
+            <h3 class="text-3xl">Area calculation</h3>
+        </div>
+
+        </div>
+        
+
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
